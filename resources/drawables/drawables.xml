@@ -1,0 +1,24 @@
+<drawables>
+    <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+
+
+
+    <bitmap id="titleLogo" filename="AS.png">
+        <palette disableTransparency="false">
+            <color>FFFFFF</color>
+        </palette>
+    </bitmap>
+
+    <bitmap id="titleLogoOrange" filename="AS.png">
+        <palette disableTransparency="false">
+            <color>FF5500</color>
+        </palette>
+    </bitmap>
+
+    <bitmap id="titleLogoRed" filename="AS.png">
+        <palette disableTransparency="false">
+            <color>FF0000</color>
+        </palette>
+    </bitmap>
+
+</drawables>

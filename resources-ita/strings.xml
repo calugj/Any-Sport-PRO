@@ -1,0 +1,317 @@
+<resources>
+	<strings>
+		<string id="pressStart">Premi START</string>
+		<string id="MenuHintUP">UP: </string>
+	    <string id="MenuHintBACK">TAP: </string>
+	    <string id="options">Opzioni</string>
+	    <string id="off">OFF</string>
+	    <string id="autolapValue">Valore Auto Lap</string>
+		<string id="Field">Campo</string>
+		<string id="WaterSports">Sport Acquatici</string>
+		<string id="Motor">Motori</string>
+		<string id="Cricket">Cricket</string>
+		<string id="Rugby">Rugby</string>
+		<string id="Volleyball">Pallavolo</string>
+		<string id="AMRAP">AMRAP</string>
+		<string id="EMOM">EMOM</string>
+		<string id="TABATA">TABATA</string>
+		<string id="WaterTubing">Water Tubing</string>
+		<string id="Wakesurfing">Wakesurf</string>
+		<string id="HuntingDogs">Caccia coi Cani</string>
+		<string id="Category">Categoria</string>
+		<string id="lapbutton">Tasto Lap</string>
+	    <string id="deleting">Eliminazione Attività</string>
+		<string id="AdventureRace">Adventure Race</string>
+		<string id="second">Secondo</string>
+		<string id="seconds">Secondi</string>
+		<string id="autopause">Pausa Automatica</string>
+		<string id="about">Info</string>
+		<string id="version">Ver 3.1</string>
+		<string id="Custom">Attività Personalizzata</string>
+		<string id="Customize">Modifica</string>
+		<string id="know">Suggerimento: lascia 0</string>
+		<string id="disableGesture">Disattiva Gesture Polso</string>
+		<string id="experimental">Funz. Sperimentale!</string>
+
+		<string id="space"> </string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    <string id="AppName">Any Sport PRO</string>
+	    <string id="yes">Si</string>
+		<string id="no">No</string>
+		<string id="active">Attivo</string>
+	    <string id="light">Chiaro</string>
+	    <string id="dark">Scuro</string>
+	    <string id="dataFields">Campi Dati</string>
+	    <string id="Page">Pagina</string>
+	    <string id="zone">Zone</string>
+	    <string id="CustomizeDataFields">Personalizza Campi</string>
+	    <string id="CustomizePage">Personalizza Pagina</string>
+		<string id="CustomizePages">Personalizza Pagine</string>
+	    <string id="NumberOfFields">Numero di Campi</string>
+		<string id="NumberOfPages">Numero di Pagine</string>
+		<string id="Pages">Pagine</string>
+		<string id="dataField">Campo</string>
+		<string id="theme">Tema</string>
+		
+		<string id="hours">ore</string>
+		<string id="recovery">RECUPERO</string>
+		<string id="trainingnEffect">TRAINING\nEFFECT</string>
+		<string id="aerobic">Aerobico</string>
+		<string id="trainingEffect">Training Effect</string>
+
+
+	    
+	    
+	    <string id="reminder">Sembra che quest'\napp ti piaccia! se vuoi\ncontribuire al progetto,\npuoi donare! Link nella\npagina dell'app\ndi Connect IQ</string>
+	    
+	    <string id="ActivityType">Tipo di Attività</string>
+	
+		<!-- Menu on back pressed -->
+		<string id="menuMain_title">Impostazioni</string>
+	    <string id="menu_satellites_selection">Satelliti</string>
+	    <string id="menu_backlight">Retroilluminazione</string>
+	    <string id="sub_backlight">Sempre Attiva</string>
+	    <string id="paceUnits">Unità del passo</string>
+	    
+	    <!-- Menu on activity ended -->
+	    <string id="menu_save">Salva</string>
+	    <string id="menu_discard">Elimina</string>
+	    <string id="menu_continue">Riprendi</string>
+	    <string id="menuEndSession_title">Pausa</string>
+	    <string id="saving">Salvataggio Attività</string>
+	    <string id="menu_lap">Lap</string>
+	    <string id="menu_autolap">Lap Automatico</string>
+		<string id="menu_mlap">Impostazioni Lap</string>
+		<string id="menu_lapScreen">Schermata Lap</string>
+		<string id="menu_lapScreenValue">Durata Schermata Lap</string>
+		<string id="menu_lapScreenField">Campo Schermata Lap</string>
+		
+	    
+	    
+	    <!-- Layout KayakView1 -->
+	    <string id="timer">Timer</string>
+	    <string id="pace">Passo</string>
+	    <string id="distance">Distanza</string>
+	    <string id="heartRate">Freq. Card.</string>
+	    <string id="heading">Direzione</string>
+	    <string id="fix">GPS</string>
+	    <string id="hr">HR</string>
+	    <string id="calories">Disp. Energ.</string>
+	    <string id="speed">Velocità</string>
+	    <string id="maxSpeed">Velocità Max.</string>
+	    <string id="maxPace">Passo Max.</string>
+	    <string id="avgSpeed">Vel. Media</string>
+	    <string id="avgPace">Passo Medio</string>
+	    <string id="avgHR">FC Media</string>
+	    <string id="maxHR">FC Max.</string>
+	    <string id="caloriez">Calorie</string>
+	    <string id="cadence">Cadenza</string>
+	    <string id="avgLapPace">Pas. MedLap</string>
+	    <string id="avgLapSpeed">Vel. MedLap</string>
+	    <string id="altitude">Altitudine</string>
+	    <string id="totalAscent">Ascesa</string>
+	    <string id="totalDescent">Discesa</string>
+	    <string id="temperature">Temperatura</string>
+	    <string id="windSpeed">Vel. Vento</string>
+	    <string id="feelsLike">Percepita</string>
+	    <string id="windBearing">Dir. Vento</string>
+	    <string id="humidity">Umidità</string>
+	    <string id="lowHigh">Min/Max Temp</string>
+	    <string id="ambientPressure">Pressione</string>
+	    <string id="oxygen">Ossigeno</string>
+	    <string id="time">Ora</string>
+	    <string id="battery">Batteria</string>
+	    <string id="accuracy">Precisione</string>
+	    
+	    <string id="timerLap">Timer Lap</string>
+	    <string id="distanceLap">Distanza Lap</string>
+	    
+	    
+	    <string id="Property_Satellites">Satelliti</string> 
+	    
+	    <string id="Property_Theme">Tema</string> 
+	    
+	    
+	    <string id="NOsatellites">OFF</string>    
+	    
+
+	    
+	   	<string id="bpm">bpm</string>
+	   	
+	   	
+
+	    
+	    
+	    
+	    
+	    
+	    <string id="Generic">Generica</string>
+	    <string id="Running">Corsa</string>
+	    <string id="Cycling">Bici</string>
+	    <string id="Transition">Transizione</string>
+	    <string id="FitnessEquipment">Attrezzatura Fitness</string>
+	    <string id="Swimming">Nuoto</string>
+	    <string id="Basketball">Basket</string>
+	    <string id="Soccer">Calcio</string>
+	    <string id="Tennis">Tennis</string>
+	    <string id="AmericanFootball">Football Americano</string>
+	    <string id="Training">Allenamento</string>
+	    <string id="Walking">Camminata</string>
+	    <string id="CrossCountrySkiing">Sci di Fondo</string>
+	    <string id="AlpineSkiing">Sci</string>
+	    <string id="Snowboarding">Snowboard</string>
+	    <string id="Rowing">Canottaggio</string>
+	    <string id="Mountaineering">Alpinismo</string>
+	    <string id="Hiking">Escursionismo</string>
+	    <string id="Multisport">Multisport</string>
+	    <string id="Paddling">Pagaiata</string>
+	    <string id="Flying">Volo</string>
+	    <string id="EBiking">eBike</string>
+	    <string id="Motorcycling">Motociclismo</string>
+	    <string id="Boating">Imbarcazione</string>
+	    <string id="Driving">Guida</string>
+	    <string id="Golf">Golf</string>
+	    <string id="HangGliding">Deltaplano</string>
+	    <string id="HorsebackRiding">Equitazione</string>
+	    <string id="Hunting">Caccia</string>
+	    <string id="Fishing">Pesca</string>
+	    <string id="InlineSkating">Pattini in Linea</string>
+	    <string id="RockClimbing">Scalata</string>
+	    <string id="Sailing">Navigazione a Vela</string>
+	    <string id="IceSkating">Pattinaggio sul Ghiaccio</string>
+	    <string id="SkyDiving">Paracadutismo</string>
+	    <string id="Snowshoeing">Ciaspolata</string>
+	    <string id="Snowmobiling">Motoslitta</string>
+	    <string id="StandUpPaddleboarding">SUP</string>
+	    <string id="Surfing">Surf</string>
+	    <string id="Wakeboarding">Wakeboard</string>
+	    <string id="WaterSkiing">Sci d'Acqua</string>
+	    <string id="Kayaking">Kayak</string>
+	    <string id="Rafting">Rafting</string>
+	    <string id="Windsurfing">Windsurf</string>
+	    <string id="Kitesurfing">Kitesurf</string>
+	    <string id="Tactical">Tattico</string>
+	    <string id="Jumpmaster">Jumpmaster</string>
+	    <string id="Boxing">Boxe</string>
+	    <string id="FloorClimbing">Salita Scale</string>
+	    <string id="Baseball">Baseball</string>
+	    <string id="SoftballFastPitch">Softball Fast Pitch</string>
+	    <string id="SoftballSlowPitch">Softball Slow Pitch</string>
+
+		<string id="Chronometer">Cronometro</string>
+		<string id="Diving">Immersione</string>
+		<string id="Safety">Sicurezza</string>
+
+		
+		
+		<string id="Shooting">Tiro a Segno</string>
+	    <string id="AutoRacing">Automobilismo</string>
+
+		<string id="WinterSports">Sport Invernali</string>
+		<string id="OffshoreGrinding">Grinding Offshore</string>
+		<string id="OnshoreGrinding">Grinding Onshore</string>
+		<string id="HIIT">HIIT</string>
+		<string id="eSport">eSport</string>
+	    
+	    
+	    
+	    <string id="Treadmill">Tapis Roulant</string>
+	    <string id="Street">Corsa su Strada</string>
+	    <string id="Trail">Trail Run</string>
+	    <string id="Track">Corsa su Pista</string>
+	    
+	    <string id="Spin">Spin</string>
+	    <string id="IndoorCycling">Bici Indoor</string>
+	    <string id="Road">Bici su Strada</string>
+	    <string id="Mountain">MTB</string>
+	    <string id="Downhill">Bici Downhill</string>
+	    <string id="Recumbent">Bici Reclinata</string>
+	    <string id="Cyclocross">Ciclocross</string>
+	    <string id="HandCycling">Handbike</string>
+	    <string id="TrackCycling">Ciclismo su Pista</string>
+	    
+	    
+	    <string id="LapSwimming">Piscina</string>
+	    <string id="OpenWater">Acque Libere</string>
+	    
+	    <string id="IndoorRowing">Vogatore</string>
+	    
+	    <string id="Elliptical">Ellittica</string>
+	    <string id="StairClimbing">Step</string>
+	    <string id="IndoorSkiing">Sci Indoor</string>
+	    
+	    <string id="FlexibilityTraining">Stretching</string>
+	    <string id="StrengthTraining">Pesi</string>
+	    
+
+		<string id="Cardio">Cardio</string>
+
+
+		<string id="Warmup">Riscaldamento Tennis</string>
+		<string id="Match">Partita Tennis</string>
+		<string id="Exercise">Esercizi Tennis</string>
+
+	    <string id="IndoorWalking">Camminata Indoor</string>
+	    <string id="SpeedWalking">Camminata Veloce</string>
+	    <string id="EBikeFitness">eBike</string>
+	    <string id="BMX">BMX</string>
+	    <string id="ATV">Quad</string>
+	    <string id="Motocross">Motocross</string>
+	    <string id="BackcountrySkiing">Sci Alpinismo</string>
+	    <string id="BackcountrySnowboarding">Snowboard Fuoripista</string>
+	    <string id="ResortSkiing">Sci Resort</string>
+	    <string id="ResortSnowboarding">Snowboard Resort</string>
+	    
+		<string id="RCDrone">Drone RC</string>
+		<string id="Wingsuit">Tuta Alare</string>
+	    <string id="WhitewaterKayaking">Kayak su Acque Bianche</string>
+	    <string id="WhitewaterRafting">Rafting su Acque Bianche</string>
+	    <string id="SkateSkiing">Sci di Fondo Skating</string>
+	    <string id="Classic">Sci di Fondo Classico</string>
+	    <string id="Yoga">Yoga</string>
+	    <string id="Pilates">Pilates</string>
+	    <string id="IndoorRunning">Corsa Indoor</string>
+	    <string id="GravelCycling">Ciclismo Gravel</string>
+	    <string id="EBikeMountain">eMTB</string>
+	    <string id="Commuting">Pendolarismo in Bici</string>
+	    <string id="MixedSurface">Superfice Mista</string>
+	    <string id="SingleGas">Immersione Gas Singolo</string>
+	    <string id="MultiGas">Immersione Multi Gas</string>
+	    <string id="GaugeDiving">Immersione con Manometro</string>
+	    <string id="ApneaDiving">Immersione in Apnea</string>
+	    <string id="ApneaHunting">Pesca in Apnea</string>
+
+	    <string id="SailRace">Gara di Vela</string>
+	    <string id="Ultra">Ultra Run</string>
+	    <string id="IndoorClimbing">Arrampicata Indoor</string>
+	    <string id="Bouldering">Bouldering</string>
+	    <string id="Breathing">Esercizi di Respirazione</string>
+
+		<string id="VirtualRun">Corsa Virtuale</string>
+	    <string id="ObstacleRun">Corsa Campestre</string>
+	    <string id="VirtualBike">Bici Virtuale</string>	
+	    <string id="Extra">Extra</string>
+	    <string id="Crossfit">Crossfit</string>
+	    <string id="Badminton">Badminton</string>
+	    <string id="Scootering">Monopattino</string>
+	    <string id="Footbike">Footbike</string>
+	    <string id="Padel">Padel</string>
+	    <string id="Squash">Squash</string>
+	    
+	    
+	</strings>
+
+</resources>

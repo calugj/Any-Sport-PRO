@@ -1,0 +1,175 @@
+<settings>
+
+    <!--
+
+    <group id="group" title="@Strings.space" description="@Strings.space" enableIfTrue="@Properties.False">
+        <setting propertyKey="@Properties.Theme" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.Satellites" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.Backlight" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.Autolap" title="@Strings.space">
+            <settingConfig type="boolean" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.lapbutton" title="@Strings.space">
+            <settingConfig type="boolean" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.AutolapValue" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.PaceUnits500" title="@Strings.space">
+            <settingConfig type="boolean" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.LapData" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.LapPage" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.Autopause" title="@Strings.space">
+            <settingConfig type="boolean" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.DisableGesture" title="@Strings.space">
+            <settingConfig type="boolean" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.Reminder" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.ActivityType" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.SubSport" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.ActivityName" title="@Strings.space">
+            <settingConfig type="alphaNumeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.CustomActivityType1" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.CustomSubSport1" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.NumberOfPages" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.FieldsPage1" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.FieldsPage2" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.FieldsPage3" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.FieldsPage4" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.11" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.12" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.13" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.14" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.15" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.16" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.21" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.22" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.23" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.24" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.25" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.26" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.31" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.32" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.33" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.34" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.35" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.36" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.41" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.42" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.43" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.44" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.45" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.46" title="@Strings.space">
+            <settingConfig type="numeric" required="true" readonly="false" />
+        </setting>
+        <setting propertyKey="@Properties.False" title="@Strings.space">
+            <settingConfig type="boolean" required="true" readonly="false" />
+        </setting>
+    </group>
+    
+    
+    -->
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <setting propertyKey="@Properties.CustomActivityName1" title="@Strings.Custom">
+        <settingConfig type="alphaNumeric" required="true" />
+    </setting>
+     
+</settings>

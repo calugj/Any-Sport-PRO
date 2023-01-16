@@ -1,0 +1,71 @@
+<properties>
+
+
+    <property id="Theme" type="number">1</property>
+    <property id="Satellites" type="number">1</property>
+    <property id="Backlight" type="float">0.0</property>
+    <property id="Autolap" type="boolean">false</property>
+    <property id="lapbutton" type="boolean">true</property>
+    <property id="AutolapValue" type="float">1.0</property>
+    <property id="PaceUnits500" type="boolean">false</property>
+    <property id="LapData" type="number">1</property>
+    <property id="LapPage" type="number">2</property>
+    <property id="Autopause" type="boolean">false</property>
+    <property id="DisableGesture" type="boolean">false</property>
+
+    <property id="False" type="boolean">false</property>
+
+    
+
+
+    <property id="Reminder" type="number">0</property>
+    
+    <property id="ActivityType" type="number">1</property>
+    <property id="SubSport" type="number">0</property>
+    <property id="ActivityName" type="string">null</property>
+
+    <property id="CustomActivityType1" type="number">0</property>
+    <property id="CustomSubSport1" type="number">0</property>
+    <property id="CustomActivityName1" type="string">Custom 1</property>
+
+
+    <property id="NumberOfPages" type="number">3</property>
+
+
+    <property id="FieldsPage1" type="number">4</property>
+    <property id="FieldsPage2" type="number">4</property>
+    <property id="FieldsPage3" type="number">3</property>
+    <property id="FieldsPage4" type="number">4</property>
+
+    
+    
+    <property id="11" type="number">1</property>
+    <property id="12" type="number">3</property>
+    <property id="13" type="number">6</property>
+    <property id="14" type="number">5</property>
+    <property id="15" type="number">11</property>
+    <property id="16" type="number">20</property>
+
+    <property id="21" type="number">2</property>
+    <property id="22" type="number">4</property>
+    <property id="23" type="number">6</property>
+    <property id="24" type="number">5</property>
+    <property id="25" type="number">11</property>
+    <property id="26" type="number">20</property>
+
+    <property id="31" type="number">31</property>
+    <property id="32" type="number">32</property>
+    <property id="33" type="number">34</property>
+    <property id="34" type="number">1</property>
+    <property id="35" type="number">1</property>
+    <property id="36" type="number">1</property>
+
+    <property id="41" type="number">1</property>
+    <property id="42" type="number">1</property>
+    <property id="43" type="number">1</property>
+    <property id="44" type="number">1</property>
+    <property id="45" type="number">1</property>
+    <property id="46" type="number">1</property>
+
+    
+</properties>
