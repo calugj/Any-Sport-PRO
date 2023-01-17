@@ -2,7 +2,10 @@ using Toybox.System;
 using Toybox.WatchUi;
 using Toybox.Timer;
 using Toybox.Application;
+using Toybox.Lang;
 
+
+// View pushed every lap, lasts a few seconds and then pops out
 public class LapView extends WatchUi.View {
     
     private var timer as Timer.Timer = null;
@@ -81,26 +84,5 @@ public class LapView extends WatchUi.View {
     }
 
     
-    
-}
-
-
-public class LapViewDelegate extends WatchUi.BehaviorDelegate {
-    
-    public function initialize() {
-        BehaviorDelegate.initialize();
-    }
-    
-    public function onMenu() {
-    	return true;
-    }
-    
-    public function onSelect() {
-        return true;
-    }
-
-    public function onBack() {
-        return true;
-    }
     
 }

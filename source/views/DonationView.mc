@@ -3,6 +3,7 @@ import Toybox.WatchUi;
 import Toybox.Timer;
 import Toybox.Communications;
 
+// Suggest to donate
 public class DonationView extends WatchUi.View {
     
     private var timer = null;
@@ -10,7 +11,7 @@ public class DonationView extends WatchUi.View {
     public function initialize() {
         View.initialize();
 
-        // For 3.1
+        // For 3.2 version
         //Communications.openWebPage("https://www.paypal.me/LucaBoscoloMeneguolo", {}, null);
     }
 
@@ -64,26 +65,6 @@ public class DonationView extends WatchUi.View {
     public function end() {
     	timer.stop();
     	System.exit();
-    }
-    
-}
-
-
-public class DonationDelegate extends WatchUi.BehaviorDelegate {
-	public function initialize() {
-        BehaviorDelegate.initialize();      
-    }
-    
-    public function onMenu() {
-    	return true;
-    }
-    
-    public function onSelect() {
-    	return true;
-    }
-    
-    public function onBack() {
-    	return true;
     }
     
 }

@@ -6,6 +6,8 @@ import Toybox.ActivityMonitor;
 import Toybox.Lang;
 import Toybox.Graphics;
 
+// Shown after activity save. Position ranges from 1 to 3 and indicates onUpdate() which info need to be shown.
+// This is done to save some code.
 public class SummaryView extends WatchUi.View {
     
     private var summary;
@@ -72,7 +74,7 @@ public class SummaryView extends WatchUi.View {
 
 
         switch(position) {
-            case 1:
+            case 1: // Time, distance and speed
                 var btmpw = WatchUi.loadResource(Rez.Drawables.LauncherIcon).getWidth();
                 dc.drawBitmap(dc.getWidth()/2 - btmpw/2, dc.getHeight()/7 - btmpw/4, WatchUi.loadResource(Rez.Drawables.LauncherIcon));
                 dc.setColor(foregroundColor, Graphics.COLOR_TRANSPARENT);
@@ -80,7 +82,7 @@ public class SummaryView extends WatchUi.View {
                 dc.drawText(dc.getWidth()/2, dc.getHeight()*4.5/7, Graphics.FONT_MEDIUM, summary[0], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
                 dc.drawText(dc.getWidth()/2, dc.getHeight()*5.5/7, Graphics.FONT_MEDIUM, summary[3], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
                 break;
-            case 2:
+            case 2: // Training effect
                 var degreeEnd = 225 - 270/5*summary[4].toFloat();
                 if(degreeEnd < 0) { degreeEnd = degreeEnd + 360; }
                 if(summary[4].toFloat() == 0) { degreeEnd = 224; }
@@ -94,7 +96,7 @@ public class SummaryView extends WatchUi.View {
                 dc.setPenWidth(dc.getWidth()/24);
                 dc.drawArc(dc.getWidth()/2, dc.getHeight()/2, dc.getHeight()/2 - dc.getWidth()/15, Graphics.ARC_CLOCKWISE, 225, degreeEnd);
                 break;
-            case 3:
+            case 3: // Recovery hours (if supported by device)
                 var recoveryValue = summary[5];
                 if(recoveryValue == null) {recoveryValue = 0;}
                 dc.setColor(accentColor, Graphics.COLOR_TRANSPARENT);
@@ -105,6 +107,7 @@ public class SummaryView extends WatchUi.View {
                 break;      
         }
 
+        // Draw the select hint only for non-touch devices
         if(!System.getDeviceSettings().isTouchScreen) {
             dc.setColor(foregroundColor, Graphics.COLOR_TRANSPARENT);
             dc.setPenWidth(3);
@@ -116,6 +119,7 @@ public class SummaryView extends WatchUi.View {
         }
     }
 
+    // Renders the dots that indicate which page is displayed
     private function renderPageNumber(dc as Graphics.Dc, color as Number, backgroundColor as Number) as Void{
         var numberOfPages = 2;
         if(Toybox.ActivityMonitor.Info has :timeToRecovery) { numberOfPages = 3; }
@@ -157,69 +161,6 @@ public class SummaryView extends WatchUi.View {
         if(timer != null) {
             timer.stop();
         }
-    }
-    
-}
-
-
-public class SummaryDelegate extends WatchUi.BehaviorDelegate {
-
-    private var position;
-    private var summary;
-    private var MAX_PAGE;
-    private var timer;
-
-    public function initialize(mSummary, mPosition) {
-        BehaviorDelegate.initialize();
-
-        position = mPosition;
-        summary = mSummary;
-        if(Toybox.ActivityMonitor.Info has :timeToRecovery) { MAX_PAGE = 3; }
-        else{ MAX_PAGE = 2; }
-
-        timer = new Timer.Timer();
-        timer.start(method(:callback), 8000, true);
-    }
-
-    public function callback() {
-        position = position + 1;
-        if(position > MAX_PAGE) {position = 1;}
-        WatchUi.switchToView(new SummaryView(summary, position), self, WatchUi.SLIDE_UP);
-    }
-    
-    public function onMenu() {
-    	return true;
-    }
-    
-    public function onSelect() {
-    	var reminder = getPropertyNumber("Reminder", 0) + 1;
-        if(reminder < 22) {
-            Application.Properties.setValue("Reminder", reminder);
-        } if(reminder == 5 || reminder == 10 || reminder == 20) {
-            WatchUi.switchToView(new DonationView(), new DonationDelegate(), WatchUi.SLIDE_RIGHT);  //donation
-            return true;
-        }
-        System.exit();
-        return true;
-    }
-    
-    public function onBack() {
-    	onSelect();
-    	return true;
-    }
-
-    public function onNextPage() {
-        timer.stop();
-        callback();
-        return true;
-    }
-
-    public function onPreviousPage() {
-        timer.stop();
-        position = position - 1;
-        if(position < 1) {position = MAX_PAGE;}
-        WatchUi.switchToView(new SummaryView(summary, position), self, WatchUi.SLIDE_DOWN);
-        return true;
     }
     
 }

@@ -3,24 +3,25 @@ import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.Communications;
 
+// Show a nice green screen with app info
 public class AboutView extends WatchUi.View {
     
     public function initialize() {
         View.initialize();
 
-        // For 3.1
+        // For 3.2
         //Communications.openWebPage("https://www.pastebin.com/CPS90MMe", {}, null);
     }
 
-    // Resources are loaded here
+    
     public function onLayout(dc) {
     }
 
-    // onShow() is called when this View is brought to the foreground
+    
     public function onShow() {
     }
 
-    // onUpdate() is called periodically to update the View
+    
     public function onUpdate(dc) {
         View.onUpdate(dc);
 
@@ -53,7 +54,7 @@ public class AboutView extends WatchUi.View {
 
     }
 
-    // onHide() is called when this View is removed from the screen
+    
     public function onHide() {
     }
 }

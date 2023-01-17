@@ -4,7 +4,8 @@ import Toybox.Timer;
 import Toybox.Graphics;
 import Toybox.Time;
 
-
+// Main purpose: Avoid a bug in FR 55 that doesn't allow to enable GPS in AppClass.mc
+// Secondary: Add a nice splash screen animation. This is overcomplicated but looks nice.
 public class GPSStarter extends WatchUi.View {
     
     private var timer;
@@ -23,6 +24,7 @@ public class GPSStarter extends WatchUi.View {
         View.initialize();
         index = 0;
 
+        // Recurrencies easter eggs
         var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         if(today.month == 3 && today.day == 22) {
             counter = 0;
@@ -51,7 +53,7 @@ public class GPSStarter extends WatchUi.View {
         }
     }
 
-
+    // Initialize all utilities
     public function onLayout(dc) {
         renderLayout = new RenderLayout();
         renderLayout.update();
@@ -90,14 +92,11 @@ public class GPSStarter extends WatchUi.View {
             dc.setAntiAlias(true);
         }
 
-
-
         if(counter <= 31) {
             dc.setColor(backgroundColor, backgroundColor);
             dc.clear();
 
             dc.drawBitmap(dc.getWidth()/2 - bitmap.getWidth()/2, dc.getHeight()/2 - bitmap.getHeight()/2, bitmap);
-
 
             dc.setColor(palette[index], Graphics.COLOR_TRANSPARENT);
             dc.drawText(dc.getWidth()/2, dc.getHeight()*0.75, Graphics.FONT_XTINY, string, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
@@ -111,9 +110,7 @@ public class GPSStarter extends WatchUi.View {
             dc.setColor(backgroundColor, backgroundColor);
             dc.setPenWidth(radius);
             dc.drawCircle(dc.getWidth()/2, dc.getHeight()/2, dc.getWidth()/2);
-
         }
-
     }
 
 

@@ -6,13 +6,13 @@ import Toybox.Application;
 
 public class SportView extends WatchUi.View {
 
-    private var values;
-    private var titles;
-    private var fieldId;
+    private var values; // Array containing data fields numeric values
+    private var titles; // Array containing data fields titles
+    private var fieldId; // Array containing data fields identificators
 
 
-    private var pageNumber;
-    private var numberOfFields;
+    private var pageNumber; // Which screen is selected
+    private var numberOfFields; // Number of fields in screen
     private var theme;
     private var backlight;
     private var disableGesture;
@@ -21,7 +21,9 @@ public class SportView extends WatchUi.View {
     private var backgroundColor;
     private var circleColor;    
 
-    private var timer;
+    private var timer; // Update timer 1 second
+
+    // Other variables used to time features like the appearing top banner...
     private var disableGestureTimer;
     private var secondsPast;
     private var previousGPSState;
@@ -73,10 +75,10 @@ public class SportView extends WatchUi.View {
         }
 
         for(var i = 0 ; i < numberOfFields ; i++) {            
-            values[i] = sessionData.getData(fieldId[i]);
+            values[i] = sessionData.getData(fieldId[i]);    // Update the numeric values directly from the session data
         }
 
-
+        // Draw the UI: Layout (green lines and background), Values and Titles
         switch(numberOfFields) {
             case 1:
                 renderLayout.oneField(dc);
@@ -114,10 +116,6 @@ public class SportView extends WatchUi.View {
 
 
 
-        
-
-        
-
         if(secondsPast < 0) {
             showPages(dc);
         }
@@ -125,7 +123,7 @@ public class SportView extends WatchUi.View {
 
 
 
-        //mostra circlecolor e rendilo trasparente
+        // Show the coloured ring and then make it transparent
         if(circleColor == Graphics.COLOR_DK_GREEN || circleColor == Graphics.COLOR_RED || circleColor == Graphics.COLOR_YELLOW) {
             dc.setColor(circleColor, Graphics.COLOR_TRANSPARENT);
             dc.setPenWidth(dc.getWidth()/12);
@@ -136,10 +134,10 @@ public class SportView extends WatchUi.View {
         }
         
         
-        
+        // Render the full top banner
         if (secondsPast >= 0 && isHintShown()){
             showHint(dc);
-        } else if(secondsPast >= 0 && isGPSHintShown()) {
+        } else if(secondsPast >= 0 && isGPSHintShown()) { // Render the reduced top banner
             showGPSHint(dc);
         }
 
@@ -183,6 +181,8 @@ public class SportView extends WatchUi.View {
         }
     }
 
+
+
     // Timer 1 second
     public function refresh() {
         if(secondsPast < 300) {
@@ -190,12 +190,16 @@ public class SportView extends WatchUi.View {
         }
         WatchUi.requestUpdate();
 
+
+        // Backlight always on feature (MIP Screens)
         if(Toybox.System.DeviceSettings has :requiresBurnInProtection && !(System.getDeviceSettings().requiresBurnInProtection) && backlight) {
             try {
                 Attention.backlight(true);
             } catch(ex) {}
         }
 
+
+        // Wrist gesture disable (AMOLED Screens) 
         if(Toybox.System.DeviceSettings has :requiresBurnInProtection && System.getDeviceSettings().requiresBurnInProtection && disableGesture) {
             if(burnInBacklightCounter < 9) {
                 try {
@@ -213,6 +217,7 @@ public class SportView extends WatchUi.View {
             }
         }
 
+        
         if(sessionData.isStarted() && sessionData.getData(33).toNumber() < 3) {
             GPSHintFlag = true;
         }
@@ -257,7 +262,7 @@ public class SportView extends WatchUi.View {
 
 
 
-    // Drawing functions
+    // Show page indicator
     private function showPages(dc) {
         var numberOfPages = getPropertyNumber("NumberOfPages", 3);
 
@@ -341,6 +346,8 @@ public class SportView extends WatchUi.View {
         }
     }
 
+    
+    // Show full banner
     private function showHint(dc) {
         dc.setColor(foregroundColor, Graphics.COLOR_TRANSPARENT);
         dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight()*0.3);
@@ -437,6 +444,8 @@ public class SportView extends WatchUi.View {
 
     }
 
+
+    // Show reduced banner
     private function showGPSHint(dc) {
         dc.setColor(foregroundColor, Graphics.COLOR_TRANSPARENT);
         dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight()*0.17);
@@ -492,8 +501,4 @@ public class SportView extends WatchUi.View {
 
         previousGPSState = accuracy;
     }
-
-
-    
-
 }

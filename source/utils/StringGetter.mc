@@ -1,11 +1,12 @@
 import Toybox.Lang;
 
+// Return the field Title given the Field Identificator
 public class StringGetter {
 
-	//private var array;
+	//private var array; Old way. Faster but resource hungry. Better a bit slower but lighter
 
     public function initialize() {
-		/*
+		/* Old way. Faster but resource hungry. Better a bit slower but lighter
 		array = new[37];
 		array[0] = "none";
 		array[1] = WatchUi.loadResource(Rez.Strings.timer);
@@ -47,7 +48,7 @@ public class StringGetter {
     	*/
     }
 
-/*
+/* Old way. Faster but resource hungry. Better a bit slower but lighter
 	public function getString(typeRequired) {
 		if(typeRequired < 0 || typeRequired >= array.size()) {return array[0];}
 		

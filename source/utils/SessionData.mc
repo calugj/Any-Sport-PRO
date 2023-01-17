@@ -7,6 +7,7 @@ import Toybox.Timer;
 import Toybox.UserProfile;
 import Toybox.Lang;
 
+// Manages everything about the session
 public class SessionData {
 
     private var session;
@@ -251,7 +252,7 @@ public class SessionData {
 		array[4] = te.format("%.1f");	// T.E.
 
 		if(Toybox.ActivityMonitor.Info has :timeToRecovery) {
-			array[5] = ActivityMonitor.getInfo().timeToRecovery;	// Time to Rec
+			array[5] = ActivityMonitor.getInfo().timeToRecovery;	// Time to Recovery
 		}
 
 		return array;

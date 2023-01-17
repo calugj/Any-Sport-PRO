@@ -3,6 +3,7 @@ import Toybox.WatchUi;
 import Toybox.Lang;
 import Toybox.System;
 
+// Homemade number picker
 class CustomNumberPicker extends WatchUi.View {
 
     private var number as Number;

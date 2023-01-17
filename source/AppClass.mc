@@ -21,13 +21,14 @@ public class AnySportProV3App extends Application.AppBase {
     // onStart() is called on application start up
     public function onStart(state as Dictionary?) as Void {
 
+        // Use to make it backwards compatible with old versions
         var deleteStorage = Application.Storage.getValue("deleteStorage");
         if(deleteStorage == null) {         
             Application.Storage.clearValues();
             Application.Storage.setValue("deleteStorage", true);
         }
 
-
+        // Set the activity name with the language specific string 
         var firstBoot = Application.Storage.getValue("firstBoot");
         if(firstBoot == null) {
             var activityName = getPropertyBoolean("ActivityName", "null");
@@ -41,7 +42,7 @@ public class AnySportProV3App extends Application.AppBase {
 
     }
 
-    // onStop() is called when your application is exiting
+
     public function onStop(state as Dictionary?) as Void {
     }
 
@@ -60,15 +61,19 @@ public function getApp() as AnySportProV3App {
 
 
 
+
+
+
+
 /*
-	0 satelliti disattivati
+	0 satellites disabled
 	1 gps
-constellation
+constellation:
 	2 gps
 	3 gps glonass
 	4 gps galileo
 	5 gps glonass galileo
-configuration
+configuration:
 	6 gps
 	7 gps glonass
 	8 gps galileo
@@ -77,6 +82,7 @@ configuration
 	11 gps glonass galileo beidou l1 l5
 	12 satiq
 */
+// Check all saltellites settings one by one and return an Array of Boolean indicating which satellites are supported
 public function checkSatellitesCompatibility() {
     // use the ConnectIQ 3.3.6 :configuration option
     var supportedSatellites = new[13];
@@ -126,7 +132,7 @@ public function checkSatellitesCompatibility() {
         }
     }
 
-    // old only gps
+    // use old only gps option
     try {
         Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, null);
         supportedSatellites[1] = true;
@@ -134,11 +140,14 @@ public function checkSatellitesCompatibility() {
     }
     Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 
-
-
     return supportedSatellites;
 }
 
+
+
+
+
+// Enable the selected satellites option. First check if supported, otherwise it may crash
 public function setSatellites(choice) {
     if(choice == 0) {
         Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
@@ -173,7 +182,10 @@ public function setSatellites(choice) {
     }
 }
 
+
+
 /*
+ Unused old function - test only
 public function migrateMemory() {
     var key =
     [
@@ -311,6 +323,9 @@ public function migrateMemory() {
 
 
 
+
+
+// Avoid crashes on Application.Properties.getValue()
 public function getPropertyBoolean(key, mDefault) {
     var value = null;
     if (Toybox.Application has :Storage) {

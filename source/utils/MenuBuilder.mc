@@ -3,9 +3,8 @@ import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.System;
 
+// Builds menus
 public class MenuBuilder {
-
-    
 
     public function initialize() {
     }
