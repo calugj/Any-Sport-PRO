@@ -65,7 +65,11 @@ public class SportViewDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
     public function callback() {
-        WatchUi.pushView(MenuBuilder.saveMenu(0), new SaveMenuDelegate(view), WatchUi.SLIDE_BLINK);
+        if(Toybox.WatchUi has :ActionMenu) {
+            WatchUi.showActionMenu(MenuBuilder.saveActionMenu(), new SaveActionMenuDelegate(view));
+        } else {
+            WatchUi.pushView(MenuBuilder.saveMenu(0), new SaveMenuDelegate(view), WatchUi.SLIDE_BLINK);
+        }
     }
 
 

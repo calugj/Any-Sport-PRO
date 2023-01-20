@@ -11,7 +11,9 @@ public class DeleteDelegate extends WatchUi.ConfirmationDelegate {
         if (response == WatchUi.CONFIRM_YES) {
             //WatchUi.pushView(new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.deleting), null), new ProgressDelegate(1), WatchUi.SLIDE_BLINK);
             sessionData.discard();
-            WatchUi.popView(WatchUi.SLIDE_RIGHT);
+            if(!(Toybox.WatchUi has :ActionMenu)) {
+                WatchUi.popView(WatchUi.SLIDE_RIGHT);
+            }
 
             if (Attention has :vibrate) {
                 Attention.vibrate([new Attention.VibeProfile(50, 100)]);

@@ -22,6 +22,22 @@ public class MenuBuilder {
     }
 
 
+    public function saveActionMenu() {
+        var theme = getPropertyNumber("Theme", 1);
+        if(theme == 1) {
+            theme = WatchUi.ACTION_MENU_THEME_DARK;
+        } else {
+            theme = WatchUi.ACTION_MENU_THEME_LIGHT;
+        }
+        var menu = new WatchUi.ActionMenu({:theme => theme});
+        menu.addItem(new WatchUi.ActionMenuItem({:label => WatchUi.loadResource(Rez.Strings.menu_continue)}, :back));
+        menu.addItem(new WatchUi.ActionMenuItem({:label => WatchUi.loadResource(Rez.Strings.menu_save)}, :save));
+        menu.addItem(new WatchUi.ActionMenuItem({:label => WatchUi.loadResource(Rez.Strings.menu_discard)}, :delete));
+        
+        return menu;
+    }
+
+
 
 
 

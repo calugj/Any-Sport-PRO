@@ -190,7 +190,6 @@ public class SportView extends WatchUi.View {
         }
         WatchUi.requestUpdate();
 
-
         // Backlight always on feature (MIP Screens)
         if(Toybox.System.DeviceSettings has :requiresBurnInProtection && !(System.getDeviceSettings().requiresBurnInProtection) && backlight) {
             try {
