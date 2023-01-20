@@ -45,17 +45,14 @@ public class LapView extends WatchUi.View {
 
         var foregroundColor;
         var backgroundColor;
-        var accentColor;
         var textColor;
         if(theme == 0) {
             foregroundColor = Graphics.COLOR_BLACK;
             backgroundColor = Graphics.COLOR_WHITE;
-            accentColor = Graphics.COLOR_DK_GREEN;
             textColor = Graphics.COLOR_BLACK;
         } else {
             foregroundColor = Graphics.COLOR_WHITE;
             backgroundColor = Graphics.COLOR_BLACK;
-            accentColor = Graphics.COLOR_GREEN;
             textColor = Graphics.COLOR_WHITE;
         }
 

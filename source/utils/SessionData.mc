@@ -191,9 +191,7 @@ public class SessionData {
 			}
 			var targetDistance = getPropertyFloat("AutolapValue", 1.0);
 
-			if(autolapEnabled && targetDistance > 0 && currentLapDistance >= targetDistance) {
-				var request = getPropertyNumber("LapData", 1);
-				
+			if(autolapEnabled && targetDistance > 0 && currentLapDistance >= targetDistance) {				
 				if(view != null) {
 					if (Attention has :vibrate) {
 						Attention.vibrate([new Attention.VibeProfile(50, 1000)]);
