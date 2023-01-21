@@ -78,9 +78,9 @@ public class SummaryView extends WatchUi.View {
                 var btmpw = WatchUi.loadResource(Rez.Drawables.LauncherIcon).getWidth();
                 dc.drawBitmap(dc.getWidth()/2 - btmpw/2, dc.getHeight()/7 - btmpw/4, WatchUi.loadResource(Rez.Drawables.LauncherIcon));
                 dc.setColor(foregroundColor, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(dc.getWidth()/2, dc.getHeight()*3/7, Graphics.FONT_NUMBER_HOT, summary[1], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-                dc.drawText(dc.getWidth()/2, dc.getHeight()*4.5/7, Graphics.FONT_MEDIUM, summary[0], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-                dc.drawText(dc.getWidth()/2, dc.getHeight()*5.5/7, Graphics.FONT_MEDIUM, summary[3], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+                dc.drawText(dc.getWidth()/2, dc.getHeight()*0.4, Graphics.FONT_SYSTEM_NUMBER_HOT, summary[1], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+                dc.drawText(dc.getWidth()/2, dc.getHeight()*0.575, Graphics.FONT_SMALL, summary[0], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+                dc.drawText(dc.getWidth()/2, dc.getHeight()*0.7, Graphics.FONT_SMALL, summary[3], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
                 break;
             case 2: // Training effect
                 var degreeEnd = 225 - 270/5*summary[4].toFloat();
@@ -90,17 +90,17 @@ public class SummaryView extends WatchUi.View {
                 dc.setColor(foregroundColor, Graphics.COLOR_TRANSPARENT);
                 dc.drawText(dc.getWidth()/2, dc.getHeight()*1.8/7, Graphics.FONT_TINY, WatchUi.loadResource(Rez.Strings.trainingnEffect), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
                 dc.drawText(dc.getWidth()/2, dc.getHeight()*5.5/8, Graphics.FONT_TINY, WatchUi.loadResource(Rez.Strings.aerobic), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-                dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Graphics.FONT_NUMBER_HOT, summary[4], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+                dc.drawText(dc.getWidth()/2, dc.getHeight()*0.52, Graphics.FONT_NUMBER_HOT, summary[4], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
                 
                 dc.setColor(accentColor, Graphics.COLOR_TRANSPARENT);
-                dc.setPenWidth(dc.getWidth()/24);
-                dc.drawArc(dc.getWidth()/2, dc.getHeight()/2, dc.getHeight()/2 - dc.getWidth()/15, Graphics.ARC_CLOCKWISE, 225, degreeEnd);
+                dc.setPenWidth(dc.getWidth()/20);
+                dc.drawArc(dc.getWidth()/2, dc.getHeight()/2, dc.getHeight()/2 - dc.getHeight()/55, Graphics.ARC_CLOCKWISE, 225, degreeEnd);
                 break;
             case 3: // Recovery hours (if supported by device)
                 var recoveryValue = summary[5];
                 if(recoveryValue == null) {recoveryValue = 0;}
                 dc.setColor(accentColor, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Graphics.FONT_NUMBER_HOT, recoveryValue, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+                dc.drawText(dc.getWidth()/2, dc.getHeight()*0.51, Graphics.FONT_NUMBER_HOT, recoveryValue, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
                 dc.drawText(dc.getWidth()/2, dc.getHeight()*5.25/8, Graphics.FONT_XTINY, WatchUi.loadResource(Rez.Strings.hours), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
                 dc.setColor(foregroundColor, Graphics.COLOR_TRANSPARENT);
                 dc.drawText(dc.getWidth()/2, dc.getHeight()*2/7, Graphics.FONT_TINY, WatchUi.loadResource(Rez.Strings.recovery), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
